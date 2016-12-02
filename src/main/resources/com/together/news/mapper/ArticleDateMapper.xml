@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.together.news.mapper.ArticleDateMapper">
+    <select id="articleDetail" resultType="String">
+        SELECT
+        article.`content` AS content,
+        `cms_article`.title AS title
+        FROM `cms_article_data` article
+        LEFT JOIN `cms_article` ON article.`id` = `cms_article`.id
+        WHERE `cms_article`.id = #{id}
+    </select>
+
+</mapper>

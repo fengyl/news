@@ -6,10 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * User
+ * 用户实体
  *
- * @author: zhangteng
- * @time: 2015/3/24 17:09
  */
 @Table(name = "t_user")
 @Entity
