@@ -9,6 +9,11 @@
         <result column="title" property="title"/>
         <result column="content" property="content"/>
     </resultMap>
+    <resultMap id="searchDto" type="com.together.news.dto.SearchDto">
+        <result property="categoryId" column="category_id" />
+        <result property="name" column="name" />
+        <result property="title" column="title" />
+    </resultMap>
     <select id="listAll" resultMap="articleResultMap">
         SELECT
         article.`id` AS id,
@@ -20,4 +25,59 @@
         LEFT JOIN `cms_category` ON article.`category_id` = `cms_category`.id
     </select>
 
+    <select id="listByCategoryId" resultMap="articleResultMap">
+        SELECT
+        article.`id` AS id,
+        article.`category_id` AS categoryId,
+        article.`title` AS title,
+        article.`content` AS content,
+        `cms_category`.`name` AS name
+        FROM `cms_article` article
+        LEFT JOIN `cms_category` ON article.`category_id` = `cms_category`.id
+        WHERE article.`category_id` = #{categoryId}
+    </select>
+
+    <delete id="delById">
+       DELETE article,articleData
+       FROM `cms_article` article, `cms_article_data` articleData
+       WHERE article.`id` = articleData.id
+       AND article.`id` = #{id}
+    </delete>
+
+    <select id="listBySearchDto" resultMap="articleResultMap" >
+        SELECT
+        article.`id` AS id,
+        article.`category_id` AS categoryId,
+        article.`title` AS title,
+        article.`content` AS content,
+        `cms_category`.`name` AS name
+        FROM `cms_article` article
+        LEFT JOIN `cms_category` ON `article`.`category_id` = `cms_category`.id
+        <where>
+            <if test="searchDto != null" >
+                <if test="searchDto.name != null and searchDto.name != ''">
+                    (
+                    `cms_category`.`name` LIKE "%"#{searchDto.name}"%"
+                    )
+                </if>
+                <if test="searchDto.categoryId != null and searchDto.categoryId != ''">
+                    (
+                    AND article.`categoryId` = #{categoryId}
+                    )
+                </if>
+                <if test="searchDto.title != null and searchDto.title != ''">
+                    (
+                    AND article.`title` LIKE "%"#{searchDto.title}"%"
+                    )
+                </if>
+            </if>
+        </where>
+        <if test="searchDto != null
+        and searchDto.offset != null
+        and searchDto.offset >= 0
+        and searchDto.pageSize != null
+        and searchDto.pageSize >= 0">
+            LIMIT #{searchDto.offset},#{searchDto.pageSize}
+        </if>
+    </select>
 </mapper>

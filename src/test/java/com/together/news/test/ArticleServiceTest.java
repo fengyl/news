@@ -1,5 +1,6 @@
 package com.together.news.test;
 
+import com.together.news.dto.SearchDto;
 import com.together.news.entity.Article;
 import com.together.news.service.ArticleService;
 import org.junit.Test;
@@ -21,5 +22,23 @@ public class ArticleServiceTest extends AbstractTestCase {
     public void listAll() throws Exception {
         List<Article> list = articleService.listAll();
         System.out.println(list.get(0));
+    }
+
+    @Test
+    public void listByCategoryId() throws Exception {
+        List<Article> list = articleService.listByCategoryId("1");
+        System.out.println(list.get(0));
+    }
+
+    @Test
+    public void delById() throws Exception {
+        articleService.delById("1");
+    }
+
+    @Test
+    public void listBySearchDto() throws Exception {
+       SearchDto searchDto = null;
+        List<Article> list = articleService.listBySearchDto(searchDto);
+
     }
 }
