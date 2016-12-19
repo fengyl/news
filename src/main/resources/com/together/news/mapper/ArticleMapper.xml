@@ -14,24 +14,31 @@
         <result property="name" column="name" />
         <result property="title" column="title" />
     </resultMap>
-    <select id="listAll" resultMap="articleResultMap">
+    <resultMap id="articleDtoResultMap" type="com.together.news.dto.ArticleDto">
+        <id column="id" property="id"/>
+        <result property="categoryId" column="category_id" />
+        <result property="name" column="name" />
+        <result property="title" column="title" />
+        <result column="content" property="content"/>
+    </resultMap>
+    <select id="listAll" resultMap="articleDtoResultMap">
         SELECT
         article.`id` AS id,
         article.`category_id` AS categoryId,
+        name,
         article.`title` AS title,
-        article.`content` AS content,
-        `cms_category`.`name` AS name
+        article.`content` AS content
         FROM `cms_article` article
         LEFT JOIN `cms_category` ON article.`category_id` = `cms_category`.id
     </select>
 
-    <select id="listByCategoryId" resultMap="articleResultMap">
+    <select id="listByCategoryId" resultMap="articleDtoResultMap">
         SELECT
         article.`id` AS id,
-        article.`category_id` AS categoryId,
-        article.`title` AS title,
+       `category_id` AS categoryId,
+       `title` AS title,
         article.`content` AS content,
-        `cms_category`.`name` AS name
+        name
         FROM `cms_article` article
         LEFT JOIN `cms_category` ON article.`category_id` = `cms_category`.id
         WHERE article.`category_id` = #{categoryId}
@@ -44,40 +51,32 @@
        AND article.`id` = #{id}
     </delete>
 
-    <select id="listBySearchDto" resultMap="articleResultMap" >
+    <select id="listBySearchDto" resultMap="articleDtoResultMap" >
         SELECT
         article.`id` AS id,
-        article.`category_id` AS categoryId,
-        article.`title` AS title,
-        article.`content` AS content,
-        `cms_category`.`name` AS name
+        category_id AS categoryId,
+        title,
+        content,
+        name
         FROM `cms_article` article
         LEFT JOIN `cms_category` ON `article`.`category_id` = `cms_category`.id
         <where>
-            <if test="searchDto != null" >
-                <if test="searchDto.name != null and searchDto.name != ''">
+                <if test="name != null and name != ''">
                     (
-                    `cms_category`.`name` LIKE "%"#{searchDto.name}"%"
+                    `cms_category`.`name` LIKE "%"#{name}"%"
                     )
                 </if>
-                <if test="searchDto.categoryId != null and searchDto.categoryId != ''">
+                <if test="title != null and title != ''">
                     (
-                    AND article.`categoryId` = #{categoryId}
+                    AND article.`title` LIKE "%"#{title}"%"
                     )
                 </if>
-                <if test="searchDto.title != null and searchDto.title != ''">
-                    (
-                    AND article.`title` LIKE "%"#{searchDto.title}"%"
-                    )
-                </if>
-            </if>
         </where>
-        <if test="searchDto != null
-        and searchDto.offset != null
-        and searchDto.offset >= 0
-        and searchDto.pageSize != null
-        and searchDto.pageSize >= 0">
-            LIMIT #{searchDto.offset},#{searchDto.pageSize}
-        </if>
+    </select>
+    <select id="queryNameById" resultType="string">
+        SELECT
+        `cms_category`.`name` AS name
+        FROM `cms_category`
+        LEFT JOIN `cms_article` ON `cms_article`.`category_id` = `cms_category`.id
     </select>
 </mapper>

@@ -1,5 +1,6 @@
 package com.together.news.service.impl;
 
+import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
 import com.together.news.entity.Article;
 import com.together.news.mapper.ArticleMapper;
@@ -22,7 +23,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
 
-    public List<Article> listAll() throws Exception {
+    public List<ArticleDto> listAll() throws Exception {
         try {
           return articleMapper.listAll();
         } catch (Exception e) {
@@ -30,7 +31,7 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
-    public List<Article> listByCategoryId(String categoryId) throws Exception {
+    public List<ArticleDto> listByCategoryId(String categoryId) throws Exception {
         try {
             if(categoryId != null) {
                 return articleMapper.listByCategoryId(categoryId);
@@ -51,13 +52,24 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
-    public List<Article> listBySearchDto(SearchDto searchDto) throws Exception {
-        List<Article> list = Collections.emptyList();
+    public List<ArticleDto> listBySearchDto(SearchDto searchDto) throws Exception {
+        List<ArticleDto> list = Collections.emptyList();
         try {
             list = articleMapper.listBySearchDto(searchDto);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
         return list;
+    }
+
+    public String queryNameById(String id) throws Exception {
+        try {
+            if (id != null) {
+               return articleMapper.queryNameById(id);
+            }
+            return null;
+        } catch(Exception e) {
+            throw new Exception(e.getMessage());
+        }
     }
 }

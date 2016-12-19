@@ -1,13 +1,15 @@
 package com.together.news.dto;
 
 /**
- * 查询条件
- *
  * @author feng yanli
- * @time 2016/12/9 22:04
+ * @time 2016/12/18 19:17
  */
 
-public class SearchDto {
+public class ArticleDto {
+
+    //文章id
+    private String id;
+
     //栏目编号
     private String categoryId;
 
@@ -16,6 +18,17 @@ public class SearchDto {
 
     //文章标题
     private String title;
+
+    //文章内容
+    private String content;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCategoryId() {
         return categoryId;
@@ -41,4 +54,11 @@ public class SearchDto {
         this.title = title;
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

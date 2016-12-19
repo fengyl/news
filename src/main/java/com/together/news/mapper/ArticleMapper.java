@@ -1,5 +1,6 @@
 package com.together.news.mapper;
 
+import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
 import com.together.news.entity.Article;
 
@@ -19,7 +20,7 @@ public interface ArticleMapper {
      * @return
      * @throws Exception
      */
-    public List<Article> listAll() throws Exception;
+    public List<ArticleDto> listAll() throws Exception;
 
     /**
      * 根据栏目id查询文章信息
@@ -27,7 +28,7 @@ public interface ArticleMapper {
      * @return
      * @throws Exception
      */
-    public List<Article> listByCategoryId(String categoryId) throws Exception;
+    public List<ArticleDto> listByCategoryId(String categoryId) throws Exception;
 
     /**
      * 根据文章id联表删除
@@ -41,5 +42,15 @@ public interface ArticleMapper {
      * @return
      * @throws Exception
      */
-    public List<Article> listBySearchDto(SearchDto searchDto) throws Exception;
+    public List<ArticleDto> listBySearchDto(SearchDto searchDto) throws Exception;
+
+    /**
+     * 根据栏目id查询文章对应的名称
+     *
+     * @return
+     * @throws Exception
+     */
+    public String queryNameById(String id) throws Exception;
+
+
 }

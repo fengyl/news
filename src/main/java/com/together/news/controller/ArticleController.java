@@ -1,17 +1,20 @@
 package com.together.news.controller;
 
+import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
 import com.together.news.entity.Article;
 import com.together.news.service.ArticleDateService;
 import com.together.news.service.ArticleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -34,11 +37,11 @@ public class ArticleController {
      * 去文章列表页
      * @return
      */
-    @RequestMapping(value = "to/article/list", method = RequestMethod.GET)
+   /* @RequestMapping(value = "index", method = RequestMethod.GET)
     public String toList(){
-        return "article_list";
+        return "index";
     }
-
+*/
     /**
      * 查询出的文章列表页
      *
@@ -46,29 +49,18 @@ public class ArticleController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "content", method = RequestMethod.GET)
+    @RequestMapping(value = "index", method = RequestMethod.GET)
     public String articleList(SearchDto searchDto,
                               Model model) {
+        List<ArticleDto> articleDtoList = Collections.emptyList();
         try{
-            List<Article> articleList = articleService.listBySearchDto(searchDto);
-            model.addAttribute("articleList", articleList);
+            articleDtoList = articleService.listBySearchDto(searchDto);
+            model.addAttribute("articleDtoList", articleDtoList);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "article_list";
+        return "index";
     }
-
-    //显示所有
-   /* @RequestMapping(value = "article/list", method = RequestMethod.GET)
-    public String toListAll(Model model) throws Exception {
-        try {
-            List<Article> list = articleService.listAll();
-            model.addAttribute("list", list);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "article_list";
-    }*/
 
       /**
      * 去文章详情页
@@ -114,9 +106,8 @@ public class ArticleController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return  "redirect:/article_list";
+        return  "redirect:/index";
     }
-
 
 
 }
