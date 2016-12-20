@@ -1,0 +1,26 @@
+[
+	{"id":1, "pId":0,  "name":"学院概况",  "isParent":true, "open":false}, 
+	{"id":11, "pId":1, "name":"学院简介"}, 
+	{"id":12, "pId":1, "name":"院长致辞"}, 
+	{"id":13, "pId":1, "name":"学院领导"}, 
+	
+	{"id":2, "pId":0, "name":"学科专业", "isParent":true, "open":true}, 
+	{"id":21, "pId":2, "name":"本科专业"}, 
+	{"id":22, "pId":2, "name":"硕士专业"}, 
+	{"id":23, "pId":2, "name":"博士专业"}, 
+	{"id":24, "pId":2, "name":"博士后流动站"}, 
+	
+	{"id":3, "pId":0, "name":"学院资讯", "isParent":true, "open":true}, 
+	{"id":31, "pId":3, "name":"学院新闻"}, 
+	{"id":32, "pId":3, "name":"通知公告"}, 
+	{"id":33, "pId":3, "name":"学术活动"}, 
+	
+	{"id":4, "pId":0, "name":"友情链接", "isParent":true, "open":true}, 	
+	{"id":41, "pId":4, "name":"常用网站"}, 
+	{"id":42, "pId":4, "name":"门户网站"}, 
+	{"id":43, "pId":4, "name":"交友社区"}, 
+	
+	{"id":5, "pId":0, "name":"百度一下"}, 
+	{"id":6, "pId":0, "name":"全文检索"}, 
+	{"id":7, "pId":0, "name":"公共留言"}
+]

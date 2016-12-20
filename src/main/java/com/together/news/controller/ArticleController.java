@@ -2,18 +2,15 @@ package com.together.news.controller;
 
 import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
-import com.together.news.entity.Article;
 import com.together.news.entity.Category;
 import com.together.news.service.ArticleDateService;
 import com.together.news.service.ArticleService;
 import com.together.news.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.Collections;
@@ -120,7 +117,7 @@ public class ArticleController {
     public String listCategory(Model model, String id) throws Exception{
         try {
             List<Category> categoryList = categoryService.listAll(id);
-           model.addAttribute("categoryList", categoryList);
+            model.addAttribute("categoryList", categoryList);
         } catch (Exception e) {
             e.printStackTrace();
         }

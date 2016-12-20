@@ -20,9 +20,10 @@
                     `cms_category`. parent_id= #{_parameter, jdbcType=VARCHAR}
                 </when>
                 <otherwise>
-                    `cms_category`.parent_id = ''
+                    ISNULL(parent_id)
+                   /* `cms_category`.parent_id = ''
                     OR `cms_category`.parent_id = null
-                    OR `cms_category`.parent_id = '0'
+                    OR `cms_category`.parent_id = '0'*/
                 </otherwise>
             </choose>
         </where>

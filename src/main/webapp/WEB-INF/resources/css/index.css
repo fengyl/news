@@ -1,0 +1,246 @@
+body {
+	background: url(../img/furley_bg.png);
+	margin:0; padding:0;
+    font-family: "Microsoft Yahei";
+
+}
+div, p, table, th, td,ul {
+	list-style:none;
+	margin:0; padding:0;
+	color:#333; font-size:12px;
+}
+#testIframe {
+	margin-left: 10px;
+}
+.navbar-inner{
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #444444), color-stop(1, #555555));
+	margin: 0px;
+	background-clip: padding-box;
+    border: 0px;
+    border-bottom: 1px solid #222;
+    box-shadow: 0px 1px 0px #f0f0f0;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+.navbar-inner p{
+	margin: 0px;
+	padding: 0px;
+	font-size: 24px;
+    font-family: "Microsoft Yahei";
+    color: #fff; 
+}
+.table{
+	border: 0;
+	align: left;
+}
+.sidebar{
+ 	width: 19%;
+    float: left;
+  	border-right: #999999 1px dashed;
+    height: 700px;
+}
+.content{
+    float: left;
+    width: 70%;
+    padding-left: 20px;
+}
+.sidebarWrapper h3{
+	display: block;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 1px #fff;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dddddd), color-stop(1, #ffffff));
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 3px;
+    background-clip: padding-box;
+    font-size: 1.5em;
+    line-height: 3em;
+    text-transform: none;
+    padding: 0em .75em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #aaa;
+    margin: 0px;
+    font-family: "Microsoft Yahei";
+}
+.ulWrapper{
+	background: transparent;
+}
+.ztree{
+	width:260px; 
+	overflow:auto;
+}
+.ztree li{
+	
+}
+.contentWrapper{
+	border: 0;
+	scroll-behavior: auto;
+	width: 100%;  
+	height: 100%; 
+}
+/*中间表格的样式*/
+a{
+    text-decoration: none;
+}
+/*选项卡*/
+.hide{
+    display: none;
+}
+.active{
+    background: #fff !important;
+}
+.tab-content{
+    padding-top: 20px;
+}
+.nav-tabs{
+    height: 48px;
+    border-bottom: 1px solid #ddd;
+}
+ul.nav{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+ul.nav li{
+    width: 213px;
+    height: 48px;
+    line-height: 48px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+ul.nav li a{
+    color: #000;
+}
+.tab-content{
+    clear: both;
+}
+.form-inline {
+    padding: 20px;
+}
+.btn-group{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+}
+.form-control{
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background: transparent;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    width: 250px;
+}
+.bg{
+    background: url(../img/)
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Microsoft Yahei";
+    background: transparent;
+}
+.table {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+.table  td,.table th{
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 37px;
+}
+.action {
+    padding: 0 5px;
+}
+a {
+    color: #428bca;
+}
+.del {
+    color: #428bca;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+/*添加文章*/
+.addArticle{
+    margin: 0 auto;
+    text-align: center;
+}
+textarea{
+    max-width: 700px;
+    margin: 0px auto;
+    vertical-align: top;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.rowWrapper{
+    padding: 38px 0px;
+}
+footer {
+    padding: 1em;
+    margin-top: 4em;
+    color: #666;
+    font-size: .85em;
+ 	text-align: left;
+    line-height: 1.3em;
+    clear: both;
+}
+footer hr {
+    margin: 2em -2em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+}
+.pull-right {
+    float: right !important;
+    margin: 0 0 10px;
+}
+p a {
+    color: #428bca;
+    text-decoration: none;
+}
