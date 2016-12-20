@@ -8,5 +8,6 @@
         <typeAlias alias="User" type="com.together.news.entity.User"/>
         <typeAlias alias="Article" type="com.together.news.entity.Article"/>
         <typeAlias alias="ArticleDate" type="com.together.news.entity.ArticleDate"/>
+        <typeAlias alias="Category" type="com.together.news.entity.Category"/>
     </typeAliases>
 </configuration>

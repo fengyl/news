@@ -3,8 +3,10 @@ package com.together.news.controller;
 import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
 import com.together.news.entity.Article;
+import com.together.news.entity.Category;
 import com.together.news.service.ArticleDateService;
 import com.together.news.service.ArticleService;
+import com.together.news.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.Assert;
@@ -33,15 +35,9 @@ public class ArticleController {
     @Resource
     private ArticleDateService articleDateService;
 
-    /**
-     * 去文章列表页
-     * @return
-     */
-   /* @RequestMapping(value = "index", method = RequestMethod.GET)
-    public String toList(){
-        return "index";
-    }
-*/
+    @Resource
+    private CategoryService categoryService;
+
     /**
      * 查询出的文章列表页
      *
@@ -66,10 +62,10 @@ public class ArticleController {
      * 去文章详情页
      * @return
      */
-    @RequestMapping(value = "to/content", method = RequestMethod.GET)
-    public String toContent(){
+   /* @RequestMapping(value = "to/content/{id}", method = RequestMethod.GET)
+    public String toContent(@PathVariable("id") String id){
         return "article_data";
-    }
+    }*/
 
     /**
      * 文章详情
@@ -77,8 +73,8 @@ public class ArticleController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "content", method = RequestMethod.GET)
-    public String articleContent(@RequestParam(value = "id") String id,
+    @RequestMapping(value = "content/{id}", method = RequestMethod.GET)
+    public String articleContent(@PathVariable(value = "id") String id,
                              Model model) {
         try{
             if(id == null){
@@ -109,5 +105,25 @@ public class ArticleController {
         return  "redirect:/index";
     }
 
+    @RequestMapping(value = "category/list", method = RequestMethod.GET)
+    public String listCategory(Model model) throws Exception{
+        try {
+            List<Category> list = categoryService.listAll(null);
+            model.addAttribute("list", list);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "index";
+    }
 
+    @RequestMapping(value = "load/category/list", method = RequestMethod.GET)
+    public String listCategory(Model model, String id) throws Exception{
+        try {
+            List<Category> categoryList = categoryService.listAll(id);
+           model.addAttribute("categoryList", categoryList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "index";
+    }
 }

@@ -1,19 +1,15 @@
-package com.together.news.mapper;
+package com.together.news.service;
 
 import com.together.news.entity.Category;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 /**
- * CategoryMapper
- *
  * @author feng yanli
- * @time 2016/12/19 14:51
+ * @time 2016/12/19 22:47
  */
 
-public interface CategoryMapper {
-
+public interface CategoryService {
     /**
      * 查询所有栏目
      * @param id

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.together.news.mapper.CategoryMapper">
+    <resultMap id="categoryResultMap" type="Category">
+        <id column="id" property="id"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="parent_ids" property="parentIdS"/>
+        <result column="site_id" property="siteId"/>
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+    </resultMap>
+    <select id="listAll" resultMap="categoryResultMap">
+        SELECT *
+        FROM `cms_category`
+        <where>
+            <choose>
+                <when test="_parameter != null and _parameter != ''">
+                    `cms_category`. parent_id= #{_parameter, jdbcType=VARCHAR}
+                </when>
+                <otherwise>
+                    `cms_category`.parent_id = ''
+                    OR `cms_category`.parent_id = null
+                    OR `cms_category`.parent_id = '0'
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>
