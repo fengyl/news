@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<!DOCTYPE html>
-<html>
 <head>
     <title>test</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -47,7 +45,7 @@
                             <label>栏目：</label>
                             <input type="text" name="lanmu1" class="form-control"placeholder="学院简介">
                         </div>
-                        <input type="button" name="search" value="搜索" class="bg btn btn-default">
+
                         <div class="btn-group">
                             <label>标题：</label>
                             <input type="text" name="title1" class="form-control">
@@ -63,7 +61,15 @@
                         </tr>
                         </thead>
                         <tbody id="content">
-                        <tr></tr>
+                        <tr>
+                            <td name="lanmu2"></td>
+                            <td name="title2"></td>
+                            <td>
+                                <a name="update" class="action" href=''>修改</a>
+                                <a name="del" class="action del" href="${website}delete/${id}">删除</button>
+                                <a name="detail" class="action" href="${website}content/${id}">详情</a>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                     <div id="Pagination" class="pagination"></div>
@@ -101,4 +107,4 @@
 <script type="text/javascript" src="../resources/pagination/jquery.pagination.js"></script>
 <script type="text/javascript" src="../resources/pagination/jquery.twbsPagination.js"></script>
 </body>
-</html>
+

@@ -42,4 +42,12 @@ public class ArticleServiceTest extends AbstractTestCase {
         List<ArticleDto> list = articleService.listBySearchDto(searchDto);
 
     }
+
+    @Test
+    public void countBySearchDto() throws Exception {
+        SearchDto searchDto = null;
+       int a= articleService.countBySearchDto(searchDto);
+        System.out.println(a);
+    }
+
 }

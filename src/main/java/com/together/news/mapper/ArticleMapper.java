@@ -52,5 +52,14 @@ public interface ArticleMapper {
      */
     public String queryNameById(String id) throws Exception;
 
+    /**
+     * 根据搜索查询数量
+     *
+     * @param searchDto
+     * @return
+     * @throws Exception
+     */
+    public int countBySearchDto(SearchDto searchDto) throws Exception;
+
 
 }

@@ -79,4 +79,23 @@
         FROM `cms_category`
         LEFT JOIN `cms_article` ON `cms_article`.`category_id` = `cms_category`.id
     </select>
+
+    <select id="countBySearchDto" resultType="int">
+        SELECT
+        COUNT(1)
+        FROM `cms_article`
+        LEFT JOIN `cms_category` ON `cms_article`.`category_id` = `cms_category`.id
+        <where>
+            <if test="name != null and name != ''">
+                (
+                `cms_category`.`name` LIKE "%"#{name}"%"
+                )
+            </if>
+            <if test="title != null and title != ''">
+                (
+                AND `title` LIKE "%"#{title}"%"
+                )
+            </if>
+        </where>
+    </select>
 </mapper>

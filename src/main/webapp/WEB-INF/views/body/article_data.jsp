@@ -1,6 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +6,6 @@
     <link rel="stylesheet" href="../resources/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <link rel="stylesheet" href="../resources/css/index.css" type="text/css">
     <link rel="stylesheet" href="../resources/css/detail.css" type="text/css">
-    <script type="text/javascript" src="../resources/js/jquery-1.8.3.min.js"></script>
-
 </head>
 <body style="font-family:'Microsoft Yahei';">
 <div class="header">

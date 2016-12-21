@@ -18,11 +18,17 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="${website}login" method="post">
-        用户名: <input type="text" name="userName" /> <br />
-        密码： <input type="password" name="password" /> <br />
-        <input type="submit" value="登录" />
-        <input type="reset" value="重置" />
-    </form>
+<table align="center">
+    <tr align="center">
+        <td>
+            <form action="${website}login" method="post">
+                用户名: <input type="text" name="userName" /> <br />
+                密码： <input type="password" name="password" /> <br />
+                <input type="submit" value="登录" />
+                <input type="reset" value="重置" />
+            </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

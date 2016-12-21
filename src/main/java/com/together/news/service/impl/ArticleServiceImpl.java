@@ -72,4 +72,14 @@ public class ArticleServiceImpl implements ArticleService {
             throw new Exception(e.getMessage());
         }
     }
+
+    public int countBySearchDto(SearchDto searchDto) throws Exception{
+        Integer count = 0;
+        try {
+            count = articleMapper.countBySearchDto(searchDto);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+        return count == null ? 0 : count;
+    }
 }
