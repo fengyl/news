@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <head>
     <title>test</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -14,13 +15,13 @@
     </div>
 </div>
 <div class="middle">
-    <h1>文章标题</h1>
-    <p>文章内容</p>
+    <h1 align="center">${title}</h1>
+    <p align="center">${articleData}</p>
 </div>
 <footer>
     <hr>
     <p class="pull-right"></p>
-    <p>&copy; 2016 <a href="#">web课开发 张美云（2014012247） 冯艳丽（）</a></p>
+    <p align="center">&copy; 2016 <a href="#">web课开发 张美云（2014012247） 冯艳丽（）</a></p>
 </footer>
 </body>
-</html>
+

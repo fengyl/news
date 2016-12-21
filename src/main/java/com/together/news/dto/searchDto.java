@@ -17,6 +17,9 @@ public class SearchDto {
     //文章标题
     private String title;
 
+    // 关键词（名称、编号、助记码）
+    private String keyword;
+
     // 页码
     private Integer pageNo;
 
@@ -72,5 +75,13 @@ public class SearchDto {
 
     public void setOffset(Integer offset) {
         this.offset = offset;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
 }

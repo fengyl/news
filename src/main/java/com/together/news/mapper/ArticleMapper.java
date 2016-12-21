@@ -45,7 +45,7 @@ public interface ArticleMapper {
     public List<ArticleDto> listBySearchDto(SearchDto searchDto) throws Exception;
 
     /**
-     * 根据栏目id查询文章对应的名称
+     * 根据栏目id查询
      *
      * @return
      * @throws Exception

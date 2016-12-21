@@ -38,7 +38,8 @@ public class ArticleServiceTest extends AbstractTestCase {
 
     @Test
     public void listBySearchDto() throws Exception {
-       SearchDto searchDto = null;
+        SearchDto searchDto = null;
+        searchDto.setTitle("东方");
         List<ArticleDto> list = articleService.listBySearchDto(searchDto);
 
     }

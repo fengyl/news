@@ -18,7 +18,8 @@ $(document).ready(function(){
 		},
 		async: {
 			enable: true,
-			url:"../resources/json/sidebar.json",
+			/*url:"../resources/json/sidebar.json",*/
+			url:"load/category/list",
 			type:"get",
 			dataType:"json",
 			autoParam:["id", "name=n", "level=lv"],

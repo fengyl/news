@@ -35,18 +35,13 @@ public class ArticleController extends AbstractController{
     @Resource
     private CategoryService categoryService;
 
-    @RequestMapping(value = "index", method = RequestMethod.GET)
-    public String toList(){
-        return "body/index";
-    }
-
     /**
      * 查询出的文章列表页
      *
      * @param searchDto
      * @return
      */
-    @RequestMapping(value = "index/{pageNo}", method = RequestMethod.GET)
+   /* @RequestMapping(value = "index/{pageNo}", method = RequestMethod.GET)
     @ResponseBody
     public JSONObject articleList(@PathVariable("pageNo") Integer pageNo,
                                   @RequestParam("pageSize") Integer pageSize,
@@ -72,7 +67,7 @@ public class ArticleController extends AbstractController{
                 jsonObject.put("categoryId", articleDto.getCategoryId());
                 jsonArray.add(jsonObject);
             }
-           /* model.addAttribute("articleDtoList", articleDtoList);*/
+           *//* model.addAttribute("articleDtoList", articleDtoList);*//*
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -85,7 +80,17 @@ public class ArticleController extends AbstractController{
         }
         return sendJsonArray(jsonArray, dataCount, 10);
     }
-
+*/
+    @RequestMapping(value = "index", method = RequestMethod.GET)
+    public String articleList(SearchDto searchDto, Model model) {
+        try{
+            List<ArticleDto> articleDtoList = articleService.listBySearchDto(searchDto);
+            model.addAttribute("articleDtoList", articleDtoList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "body/index";
+    }
     /**
      * 文章详情
      *
@@ -99,8 +104,10 @@ public class ArticleController extends AbstractController{
             if(id == null){
                 System.out.print("无此文章！");
             }else {
+                String title = articleService.queryNameById(id);
                 String articleData = articleDateService.articleDetail(id);
                 model.addAttribute("articleData", articleData);
+                model.addAttribute("title", title);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -120,14 +127,24 @@ public class ArticleController extends AbstractController{
     }
 
     @RequestMapping(value = "load/category/list", method = RequestMethod.GET)
-    public String listCategory(Model model, String id) throws Exception{
+    public JSONObject listCategory(String id) throws Exception {
+        List<Category> categoryList = Collections.emptyList();
+        JSONArray jsonArray = new JSONArray();
         try {
-            List<Category> categoryList = categoryService.listAll(id);
-            model.addAttribute("categoryList", categoryList);
+            categoryList = categoryService.listAll(id);
+            for (Category category : categoryList){
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("id", category.getId());
+                jsonObject.put("name",category.getName());
+                jsonObject.put("parentId", category.getParentId());
+                jsonObject.put("description", category.getDescription());
+                jsonObject.put("siteId", category.getSiteId());
+                jsonArray.add(jsonObject);
+            }
         } catch (Exception e) {
-            e.printStackTrace();
+           sendErrMsgAndErrCode(e);
         }
-        return "body/index";
+        return sendJsonArray(jsonArray);
     }
 
     /**

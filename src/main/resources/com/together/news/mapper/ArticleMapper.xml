@@ -75,9 +75,9 @@
     </select>
     <select id="queryNameById" resultType="string">
         SELECT
-        `cms_category`.`name` AS name
-        FROM `cms_category`
-        LEFT JOIN `cms_article` ON `cms_article`.`category_id` = `cms_category`.id
+        `cms_article`.`title`
+        FROM `cms_article`
+        WHERE `cms_article`.`id` = #{id}
     </select>
 
     <select id="countBySearchDto" resultType="int">
