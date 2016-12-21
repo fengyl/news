@@ -43,12 +43,12 @@
                     <form name="form" action="${website}index" method="get" class="form-inline">
                         <div class="btn-group">
                             <label>栏目：</label>
-                            <input type="text" name="lanmu1" class="form-control"placeholder="学院简介">
+                            <input type="text" name="name" class="form-control"placeholder="学院简介">
                         </div>
 
                         <div class="btn-group">
                             <label>标题：</label>
-                            <input type="text" name="title1" class="form-control">
+                            <input type="text" name="title" class="form-control">
                         </div>
                         <input type="submit" name="ask" value="查询" class="btn btn-default">
                     <table name="form" class="table table-bordered table-hover">

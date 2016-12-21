@@ -1,6 +1,3 @@
-/*<%@ include page contentType="text/html;charset=UTF-8" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>*/
 $(document).ready(function(){
 	// 选项卡
 	$(".nav li").click(function(){
@@ -18,7 +15,6 @@ $(document).ready(function(){
 		},
 		async: {
 			enable: true,
-			/*url:"../resources/json/sidebar.json",*/
 			url:"load/category/list",
 			type:"get",
 			dataType:"json",

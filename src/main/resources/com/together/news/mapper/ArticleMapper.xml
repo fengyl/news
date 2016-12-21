@@ -61,12 +61,12 @@
         FROM `cms_article` article
         LEFT JOIN `cms_category` ON `article`.`category_id` = `cms_category`.id
         <where>
-                <if test="name != null and name != ''">
+                <if test="name != null and name.length()!=0 ''">
                     (
                     `cms_category`.`name` LIKE "%"#{name}"%"
                     )
                 </if>
-                <if test="title != null and title != ''">
+                <if test="title != null and title.length!=0 ''">
                     (
                     AND article.`title` LIKE "%"#{title}"%"
                     )
