@@ -7,7 +7,8 @@ import com.together.news.mapper.ArticleMapper;
 import com.together.news.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +24,12 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
 
+    /**
+     * 查询全部
+     *
+     * @return
+     * @throws Exception
+     */
     public List<ArticleDto> listAll() throws Exception {
         try {
           return articleMapper.listAll();
@@ -31,6 +38,12 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
+    /**
+     * 根据栏目id查询文章信息
+     *
+     * @return
+     * @throws Exception
+     */
     public List<ArticleDto> listByCategoryId(String categoryId) throws Exception {
         try {
             if(categoryId != null) {
@@ -42,6 +55,11 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
+    /**
+     * 根据文章id删除
+     * @param id
+     * @throws Exception
+     */
     public void delById(String id) throws Exception {
         try {
             if(id != null) {
@@ -52,6 +70,11 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
+    /**
+     * 根据搜索条件模糊查询
+     * @return
+     * @throws Exception
+     */
     public List<ArticleDto> listBySearchDto(SearchDto searchDto) throws Exception {
         List<ArticleDto> list = Collections.emptyList();
         try {
@@ -62,6 +85,12 @@ public class ArticleServiceImpl implements ArticleService {
         return list;
     }
 
+    /**
+     * 根据id查找标题名称
+     * @param id
+     * @return
+     * @throws Exception
+     */
     public String queryNameById(String id) throws Exception {
         try {
             if (id != null) {
@@ -69,6 +98,21 @@ public class ArticleServiceImpl implements ArticleService {
             }
             return null;
         } catch(Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    /**
+     * 新增文章
+     * @param articleDto
+     * @throws Exception
+     */
+    @Transactional(rollbackFor = {Exception.class,RuntimeException.class,Exception.class},propagation = Propagation.REQUIRED)
+    public void newArticle(ArticleDto articleDto) throws Exception{
+        try {
+            Article article = (new Article()).constructFromDto(articleDto);
+            articleDto.setId(article.getId());
+        }catch (Exception e){
             throw new Exception(e.getMessage());
         }
     }

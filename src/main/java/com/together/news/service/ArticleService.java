@@ -2,7 +2,6 @@ package com.together.news.service;
 
 import com.together.news.dto.ArticleDto;
 import com.together.news.dto.SearchDto;
-import com.together.news.entity.Article;
 
 import java.util.List;
 
@@ -51,6 +50,13 @@ public interface ArticleService {
      * @throws Exception
      */
     public String queryNameById(String id) throws Exception;
+
+    /**
+     * 新增文章
+     * @param articleDto
+     * @throws Exception
+     */
+    public void newArticle(ArticleDto articleDto) throws Exception;
 
     /**
      * 根据搜索查询数量

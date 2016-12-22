@@ -78,14 +78,14 @@
 
                 </div>
                 <div class="articleAdd hide">
-                    <form class="addArticle" action="" method="post">
+                    <form class="addArticle" action="${website}new" method="post">
                         <div class="rowWrapper">
                             <label>栏目：</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" value="">
                         </div>
                         <div class="rowWrapper">
                             <label>标题：</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" value="">
                         </div>
                         <div class="rowWrapper">
                             <label>内容：</label><textarea rows="15" cols="60" value="请写入文章内容..."></textarea>

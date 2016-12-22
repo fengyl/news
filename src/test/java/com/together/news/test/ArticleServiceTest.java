@@ -51,4 +51,13 @@ public class ArticleServiceTest extends AbstractTestCase {
         System.out.println(a);
     }
 
+    @Test
+    public void newArticle() throws Exception {
+        ArticleDto articleDto = null;
+        articleDto.setTitle("haochi");
+        articleDto.setName("东北师范大学");
+        articleDto.setContent("很好次");
+        articleService.newArticle(articleDto);
+    }
+
 }
