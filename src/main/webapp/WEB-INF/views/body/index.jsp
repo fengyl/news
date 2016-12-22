@@ -78,7 +78,7 @@
 
                 </div>
                 <div class="articleAdd hide">
-                    <form class="addArticle">
+                    <form class="addArticle" action="" method="post">
                         <div class="rowWrapper">
                             <label>栏目：</label>
                             <input type="text" class="form-control">
