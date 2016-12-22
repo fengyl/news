@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="95d74541-1eb5-4c70-ad3e-276e85258ee6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/controller/ArticleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/entity/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/entity/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/service/ArticleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/service/impl/ArticleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/service/impl/ArticleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/body/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/body/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/together/news/test/ArticleServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/together/news/test/ArticleServiceTest.java" />
     </list>
     <ignored path="news.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +56,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35972852">
+            <state vertical-scroll-proportion="0.54298645">
               <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
               <folding />
             </state>
@@ -1266,7 +1258,7 @@
       <workItem from="1482295876175" duration="3905000" />
       <workItem from="1482314580285" duration="9916000" />
       <workItem from="1482325595878" duration="11558000" />
-      <workItem from="1482363203798" duration="7882000" />
+      <workItem from="1482363203798" duration="8046000" />
     </task>
     <task id="LOCAL-00001" summary="列表和详情">
       <created>1480687998124</created>
@@ -1334,7 +1326,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482365607635</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="侧边栏侧边栏侧边栏，新增有问题问题&#10;">
+      <created>1482383586447</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1482383586447</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1370,7 +1368,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113341000" />
+    <option name="totallyTimeSpent" value="113505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1462,7 +1460,8 @@
     <MESSAGE value="列表页&#10;" />
     <MESSAGE value="侧边栏数据刷出，但是未在页面显示&#10;" />
     <MESSAGE value="侧边栏侧边栏侧边栏&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="侧边栏侧边栏侧边栏&#10;" />
+    <MESSAGE value="侧边栏侧边栏侧边栏，新增有问题问题&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="侧边栏侧边栏侧边栏，新增有问题问题&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1845,7 +1844,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35972852">
+        <state vertical-scroll-proportion="0.54298645">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding />
         </state>
