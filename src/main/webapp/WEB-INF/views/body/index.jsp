@@ -43,7 +43,7 @@
                     <form name="form" action="${website}index" method="get" class="form-inline">
                         <div class="btn-group">
                             <label>栏目：</label>
-                            <input type="text" name="name" class="form-control"placeholder="学院简介">
+                            <input type="text" name="name" class="form-control"placeholder="栏目名称">
                         </div>
 
                         <div class="btn-group">
