@@ -40,7 +40,7 @@
             <div class="tab-content">
                 <!-- 文章列表 -->
                 <div class="articleList">
-                    <form name="form" action="${website}index" method="get" class="form-inline">
+                    <form name="form" action="${website}to/index" method="get" class="form-inline">
                         <div class="btn-group">
                             <label>栏目：</label>
                             <input type="text" name="name" class="form-control"placeholder="栏目名称">
@@ -103,8 +103,8 @@
     <p align="center">&copy; 2016 <a href="#">web课开发 张美云（2014012247） 冯艳丽（）</a></p>
 </footer>
 <script type="text/javascript" src="../resources/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../resources/js/index.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.ztree.all.js"></script>
+<script type="text/javascript" src="../resources/js/index.js"></script>
 <script type="text/javascript" src="../resources/pagination/jquery.pagination.js"></script>
 <script type="text/javascript" src="../resources/pagination/jquery.twbsPagination.js"></script>
 </body>

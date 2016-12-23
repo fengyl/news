@@ -66,7 +66,7 @@ public class AbstractController {
 
     protected JSONObject sendJsonArray(JSONArray jsonArray) {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("code", AJAX_SUCCESS_CODE);
+        //jsonObject.put("code", AJAX_SUCCESS_CODE);
         jsonObject.put("list", jsonArray);
         return jsonObject;
     }

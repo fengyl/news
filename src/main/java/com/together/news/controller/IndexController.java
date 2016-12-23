@@ -29,7 +29,7 @@ public class IndexController {
     {
         //If session have attribute "user", jump to index page, else jump to login page.
         if (request.getSession().getAttribute("user") != null){
-            return "body/index";
+            return "index";
         }
         else {
             return "login";
@@ -44,7 +44,7 @@ public class IndexController {
             //If pass, set attribute to session, then redirect to index page.
             if (userService.checkLogin(user)) {
                 request.getSession().setAttribute("user", user);
-                return "redirect:index";
+                return "redirect:to/index";
             }
             //If not pass, send error attribute.
             else{

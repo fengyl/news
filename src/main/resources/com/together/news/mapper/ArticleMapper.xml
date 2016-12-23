@@ -66,11 +66,18 @@
                     `cms_category`.`name` LIKE "%"#{name}"%"
                     )
                 </if>
-                <if test="title != null and title.length!=0">
+                <if test="title != null and title.length()!=0 ">
+                 AND
                     (
-                    AND article.`title` LIKE "%"#{title}"%"
+                     article.`title` LIKE "%"#{title}"%"
                     )
                 </if>
+            <if test="categoryId != null and categoryId.length()!=0 ">
+                AND
+                (
+                article.`category_id` =  `cms_category`.id
+                )
+            </if>
         </where>
     </select>
     <select id="queryNameById" resultType="string">
