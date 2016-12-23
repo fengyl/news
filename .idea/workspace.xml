@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d74541-1eb5-4c70-ad3e-276e85258ee6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/together/news/test/CategoryServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/together/news/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/together/news/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/together/news/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/together/news/controller/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/controller/AbstractController.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/controller/AbstractController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/controller/ArticleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/together/news/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/together/news/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/together/news/mapper/CategoryMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/json/sidebar.json" afterPath="$PROJECT_DIR$/src/main/webapp/resources/json/sidebar.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/body/article_data.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/article_data.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/body/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
     </list>
     <ignored path="news.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +93,8 @@
       <file leaf-file-name="ArticleMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5">
-              <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.83682007">
+              <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
               <folding>
                 <marker date="1482455510005" expanded="true" signature="1168:1445" placeholder="SELECT artic... cms_article" />
                 <marker date="1482455510005" expanded="true" signature="1536:1847" placeholder="SELECT artic... cms_article" />
@@ -1255,7 +1243,7 @@
       <workItem from="1482393885187" duration="6228000" />
       <workItem from="1482401295921" duration="1197000" />
       <workItem from="1482403083172" duration="15317000" />
-      <workItem from="1482452672599" duration="3071000" />
+      <workItem from="1482452672599" duration="3413000" />
     </task>
     <task id="LOCAL-00001" summary="列表和详情">
       <created>1480687998124</created>
@@ -1335,7 +1323,13 @@
       <option name="project" value="LOCAL" />
       <updated>1482383717125</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="侧边栏请求&#10;">
+      <created>1482455788436</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1482455788436</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1371,7 +1365,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147248000" />
+    <option name="totallyTimeSpent" value="147590000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1406,7 +1400,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29015544" sideWeight="0.86757994" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4818653" sideWeight="0.86757994" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1466,7 +1460,8 @@
     <MESSAGE value="侧边栏数据刷出，但是未在页面显示&#10;" />
     <MESSAGE value="侧边栏侧边栏侧边栏&#10;" />
     <MESSAGE value="侧边栏侧边栏侧边栏，新增有问题问题&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="侧边栏侧边栏侧边栏，新增有问题问题&#10;" />
+    <MESSAGE value="侧边栏请求&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="侧边栏请求&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1773,6 +1768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4348786">
           <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1838,8 +1834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/together/news/mapper/ArticleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
-          <caret line="77" column="58" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.83682007">
+          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding>
             <marker date="1482455510005" expanded="true" signature="1168:1445" placeholder="SELECT artic... cms_article" />
             <marker date="1482455510005" expanded="true" signature="1536:1847" placeholder="SELECT artic... cms_article" />
